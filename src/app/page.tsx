@@ -9,6 +9,7 @@ import {
   Phone,
 } from "lucide-react";
 import { GithubIcon } from "@/components/GithubIcon";
+import { JsonLd } from "@/components/JsonLd";
 import { LinkedinIcon } from "@/components/LinkedinIcon";
 import { ProjectCard } from "@/components/ProjectCard";
 import { SectionHeading } from "@/components/SectionHeading";
@@ -23,6 +24,7 @@ import {
 export default function Home() {
   return (
     <main className="min-h-screen bg-zinc-950 text-zinc-50 selection:bg-emerald-500/30 font-sans pb-24">
+      <JsonLd />
       <div className="mx-auto max-w-4xl px-6 py-24 sm:py-32 lg:px-8">
         {/* Hero Section & About */}
         <section className="mb-24 flex flex-col items-start">

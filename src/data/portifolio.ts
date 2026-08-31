@@ -1,5 +1,11 @@
 import type { Education, Experience, Profile, Project, Skill } from "./types";
 
+export const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ||
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://brunofukumori.com.br");
+
 export const profile: Profile = {
   name: "Bruno Fukumori",
   role: "Engenheiro de Software Sênior | Fullstack",
