@@ -133,6 +133,59 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "grindsense-backend",
+    title: "GrindSense API",
+    architecture: "TypeScript & Node.js",
+    description:
+      "API de backend desenvolvida para o projeto GrindSense (NEXT 2026 - FIAP). Otimizada para o armazenamento e processamento eficiente de dados biométricos e séries temporais.",
+    metrics: ["Séries Temporais", "Processamento Biométrico", "TypeScript"],
+    link: "https://github.com/bfukumori/grindsense-backend",
+  },
+  {
+    id: "micro-app-architecture",
+    title: "Micro App Architecture Demo",
+    architecture: "TypeScript & Microfrontends",
+    description:
+      "Laboratório de arquitetura focado em modularidade e escalabilidade utilizando padrões de Micro-Apps (Microfrontends).",
+    metrics: ["Escalabilidade Modular", "Desacoplamento", "Integração"],
+    link: "https://github.com/bfukumori/micro-app-architecture-demo",
+  },
+  {
+    id: "cpu-profiling",
+    title: "Node.js CPU Profiling",
+    architecture: "JavaScript & Node Inspector",
+    description:
+      "Projeto prático para o diagnóstico avançado de problemas de performance e gargalos de CPU em ambientes Node.js utilizando ferramentas de inspeção nativas.",
+    metrics: [
+      "Diagnóstico de Performance",
+      "Observabilidade",
+      "Troubleshooting",
+    ],
+    link: "https://github.com/bfukumori/cpu-profiling-example",
+  },
+  {
+    id: "design-patterns",
+    title: "Design Patterns",
+    architecture: "Java & Orientação a Objetos",
+    description:
+      "Implementação prática dos principais padrões de projeto (Design Patterns) da Engenharia de Software, focando em Clean Architecture e princípios SOLID.",
+    metrics: ["Boas Práticas", "SOLID", "Arquitetura Limpa"],
+    link: "https://github.com/bfukumori/design-patterns",
+  },
+  {
+    id: "data-structures",
+    title: "Data Structures",
+    architecture: "Java & Algoritmos",
+    description:
+      "Repositório focado na implementação detalhada e estudo aprofundado das principais estruturas de dados da ciência da computação.",
+    metrics: [
+      "Fundamentos de Engenharia",
+      "Algoritmos Nativos",
+      "Estudo de Complexidade",
+    ],
+    link: "https://github.com/bfukumori/data-structures",
+  },
+  {
     id: "marketplace-mobile",
     title: "Marketplace de Serviços Mobile na àrea da Saúde",
     architecture: "React Native, Expo & APIs Seguras",
@@ -190,59 +243,6 @@ export const projects: Project[] = [
       "Arquitetura Clean Code",
       "Testes end-to-end automatizados",
     ],
-  },
-  {
-    id: "grindsense-backend",
-    title: "GrindSense API",
-    architecture: "TypeScript & Node.js",
-    description:
-      "API de backend desenvolvida para o projeto GrindSense (NEXT 2026 - FIAP). Otimizada para o armazenamento e processamento eficiente de dados biométricos e séries temporais.",
-    metrics: ["Séries Temporais", "Processamento Biométrico", "TypeScript"],
-    link: "https://github.com/bfukumori/grindsense-backend",
-  },
-  {
-    id: "micro-app-architecture",
-    title: "Micro App Architecture Demo",
-    architecture: "TypeScript & Microfrontends",
-    description:
-      "Laboratório de arquitetura focado em modularidade e escalabilidade utilizando padrões de Micro-Apps (Microfrontends).",
-    metrics: ["Escalabilidade Modular", "Desacoplamento", "Integração"],
-    link: "https://github.com/bfukumori/micro-app-architecture-demo",
-  },
-  {
-    id: "cpu-profiling",
-    title: "Node.js CPU Profiling",
-    architecture: "JavaScript & Node Inspector",
-    description:
-      "Projeto prático para o diagnóstico avançado de problemas de performance e gargalos de CPU em ambientes Node.js utilizando ferramentas de inspeção nativas.",
-    metrics: [
-      "Diagnóstico de Performance",
-      "Observabilidade",
-      "Troubleshooting",
-    ],
-    link: "https://github.com/bfukumori/cpu-profiling-example",
-  },
-  {
-    id: "design-patterns",
-    title: "Design Patterns",
-    architecture: "Java & Orientação a Objetos",
-    description:
-      "Implementação prática dos principais padrões de projeto (Design Patterns) da Engenharia de Software, focando em Clean Architecture e princípios SOLID.",
-    metrics: ["Boas Práticas", "SOLID", "Arquitetura Limpa"],
-    link: "https://github.com/bfukumori/design-patterns",
-  },
-  {
-    id: "data-structures",
-    title: "Data Structures",
-    architecture: "Java & Algoritmos",
-    description:
-      "Repositório focado na implementação detalhada e estudo aprofundado das principais estruturas de dados da ciência da computação.",
-    metrics: [
-      "Fundamentos de Engenharia",
-      "Algoritmos Nativos",
-      "Estudo de Complexidade",
-    ],
-    link: "https://github.com/bfukumori/data-structures",
   },
 ];
 
