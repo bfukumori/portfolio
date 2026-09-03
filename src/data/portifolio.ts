@@ -139,6 +139,21 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+    id: "monorepo-backoffice-example",
+    title: "Monorepo Backoffice Example",
+    architecture: "Turborepo, NestJS & Vite",
+    description:
+      "Arquitetura monorepo full-stack para sistemas de backoffice, utilizando pnpm workspaces, NestJS no backend, Vite/React no frontend e pacotes compartilhados de domínio e tipagem.",
+    metrics: [
+      "Monorepo",
+      "Full-Stack",
+      "TypeScript",
+      "SOLID",
+      "Clean Architecture",
+    ],
+    link: "https://github.com/bfukumori/monorepo-backoffice-example",
+  },
+  {
     id: "grindsense-backend",
     title: "GrindSense API",
     architecture: "TypeScript & Node.js",
