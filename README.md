@@ -12,7 +12,6 @@ Portfólio profissional focado na apresentação de estudos de caso arquiteturai
 
 ## 🏗 Decisões de Arquitetura (ADRs)
 
-* **Static Site Generation (SSG):** A aplicação utiliza o `output: 'export'` do Next.js. O portfólio não necessita de estado dinâmico em servidor (SSR). Compilar tudo para HTML/CSS/JS estático garante latência quase nula via CDN e viabiliza hospedagem 100% gratuita (GitHub Pages, Cloudflare Pages ou Vercel).
 * **Separação de Preocupações (Data-Driven UI):** Todo o conteúdo do portfólio (experiências, projetos, habilidades) está isolado em `src/data/portfolio.ts` através de interfaces TypeScript rigorosas. A camada de apresentação (componentes React) atua apenas como consumidora (View). Isso facilita atualizações e abre caminho para uma futura adoção de um CMS Headless.
 * **Tooling Rigoroso:** Substituição da dupla Prettier + ESLint pelo **Biome**. Mais rápido e implementado nativamente em Rust, garantindo consistência de código sem overhead na esteira de CI.
 * **Animações Não-Intrusivas:** Uso do `Framer Motion` focado na propriedade `whileInView`, renderizando transições suaves baseadas no scroll de forma declarativa e performática.
