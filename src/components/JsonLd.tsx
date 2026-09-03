@@ -1,7 +1,16 @@
-import { education, profile, siteUrl, skills } from "@/data/portifolio";
+import {
+  education,
+  experiences,
+  profile,
+  siteUrl,
+  skills,
+} from "@/data/portfolio";
 
 export function JsonLd() {
   const allSkills = skills.flatMap((group) => group.items);
+  const currentCompany =
+    experiences.find((exp) => exp.period.toLowerCase().includes("presente"))
+      ?.company || experiences[0]?.company;
 
   const schema = {
     "@context": "https://schema.org",
@@ -27,10 +36,14 @@ export function JsonLd() {
           "@type": "EducationalOrganization",
           name: edu.institution,
         })),
-        worksFor: {
-          "@type": "Organization",
-          name: "Hapvida NotreDame Intermédica",
-        },
+        ...(currentCompany
+          ? {
+              worksFor: {
+                "@type": "Organization",
+                name: currentCompany,
+              },
+            }
+          : {}),
         knowsAbout: allSkills,
       },
       {
@@ -66,6 +79,7 @@ export function JsonLd() {
   return (
     <script
       type="application/ld+json"
+      // biome-ignore lint/security/noDangerouslySetInnerHtml: Padrão oficial do Next.js para script JSON-LD
       dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
   );

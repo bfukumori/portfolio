@@ -35,4 +35,4 @@ Portfólio profissional focado na apresentação de estudos de caso arquiteturai
 │   ├── components/         # Componentes React reutilizáveis (ProjectCard, SectionHeading)
 │   └── data/               # Fonte da verdade do conteúdo (portfolio.ts com interfaces rígidas)
 ├── biome.json              # Configuração do Linter (com suporte a Tailwind v4)
-└── next.config.ts          # Configuração de build (output: export)
+└── next.config.ts          # Configuração do Next.js (React Compiler habilitado)

@@ -59,7 +59,7 @@ export const skills: Skill[] = [
       "CI/CD",
       "Turborepo",
       "Nx",
-      "Github Actions",
+      "GitHub Actions",
     ],
   },
   {
@@ -208,7 +208,7 @@ export const projects: Project[] = [
   },
   {
     id: "marketplace-mobile",
-    title: "Marketplace de Serviços Mobile na àrea da Saúde",
+    title: "Marketplace de Serviços Mobile na Área da Saúde",
     architecture: "React Native, Expo & APIs Seguras",
     description:
       "Desenvolvimento e arquitetura de um aplicativo mobile focado em alta usabilidade, integrando sistemas complexos de agendamento e autenticação em tempo real.",

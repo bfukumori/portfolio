@@ -19,7 +19,7 @@ import {
   profile,
   projects,
   skills,
-} from "@/data/portifolio";
+} from "@/data/portfolio";
 
 export default function Home() {
   return (
@@ -95,15 +95,15 @@ export default function Home() {
             <SectionHeading title="Habilidades Técnicas" disableBorder />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {skills.map((skillGroup, idx) => (
-              <div key={`skill-group-${idx}`}>
+            {skills.map((skillGroup) => (
+              <div key={skillGroup.category}>
                 <h3 className="text-sm font-medium text-zinc-200 mb-3 uppercase tracking-wider">
                   {skillGroup.category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
-                  {skillGroup.items.map((item, i) => (
+                  {skillGroup.items.map((item) => (
                     <span
-                      key={`skill-${idx}-${i}`}
+                      key={item}
                       className="text-sm font-medium text-zinc-300 px-3 py-1.5 bg-zinc-800/80 rounded-lg border border-zinc-700/80"
                     >
                       {item}
@@ -122,51 +122,65 @@ export default function Home() {
             <SectionHeading title="Experiência Profissional" disableBorder />
           </div>
           <div className="space-y-12">
-            {experiences.map((exp) => (
-              <div
-                key={exp.id}
-                className="relative pl-8 border-l border-zinc-800"
-              >
-                <div className="absolute w-3 h-3 bg-zinc-800 rounded-full left-[-6.5px] top-2 border-2 border-zinc-950" />
-                <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
-                  <h3 className="text-xl font-bold text-zinc-100">
-                    {exp.role}
-                  </h3>
-                  <span className="text-sm text-zinc-400 font-mono tracking-tight">
-                    {exp.period}
-                  </span>
-                </header>
-                <div className="text-lg font-medium text-emerald-400 mb-4">
-                  {exp.company}
-                </div>
-                <ul className="space-y-3 mb-6">
-                  {exp.description.map((desc, i) => (
-                    <li
-                      key={`${exp.id}-desc-${i}`}
-                      className="text-zinc-300 leading-relaxed flex gap-2 text-base"
-                    >
-                      <span
-                        className="text-emerald-500 shrink-0"
-                        aria-hidden="true"
-                      >
-                        ▹
-                      </span>
-                      <span>{desc}</span>
-                    </li>
-                  ))}
-                </ul>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, i) => (
-                    <span
-                      key={`${exp.id}-tech-${i}`}
-                      className="text-xs font-mono text-zinc-300 px-2 py-1 bg-zinc-800 rounded-md border border-zinc-700/50"
-                    >
-                      {tech}
+            {experiences.map((exp) => {
+              const isCurrent = exp.period.toLowerCase().includes("presente");
+              return (
+                <div
+                  key={exp.id}
+                  className="relative pl-8 border-l border-zinc-800"
+                >
+                  <div
+                    className={`absolute w-3 h-3 rounded-full left-[-6.5px] top-2 border-2 border-zinc-950 ${
+                      isCurrent
+                        ? "bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.7)]"
+                        : "bg-zinc-800"
+                    }`}
+                  />
+                  <header className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mb-2">
+                    <h3 className="text-xl font-bold text-zinc-100 flex items-center gap-2">
+                      <span>{exp.role}</span>
+                      {isCurrent && (
+                        <span className="inline-flex items-center rounded-full bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 text-xs font-semibold text-emerald-400 font-sans">
+                          Atual
+                        </span>
+                      )}
+                    </h3>
+                    <span className="text-sm text-zinc-400 font-mono tracking-tight">
+                      {exp.period}
                     </span>
-                  ))}
+                  </header>
+                  <div className="text-lg font-medium text-emerald-400 mb-4">
+                    {exp.company}
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {exp.description.map((desc) => (
+                      <li
+                        key={desc}
+                        className="text-zinc-300 leading-relaxed flex gap-2 text-base"
+                      >
+                        <span
+                          className="text-emerald-500 shrink-0"
+                          aria-hidden="true"
+                        >
+                          ▹
+                        </span>
+                        <span>{desc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex flex-wrap gap-2">
+                    {exp.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-xs font-mono text-zinc-300 px-2 py-1 bg-zinc-800 rounded-md border border-zinc-700/50"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

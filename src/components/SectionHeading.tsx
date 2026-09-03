@@ -15,8 +15,8 @@ export function SectionHeading({
     <motion.h2
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5 }}
+      viewport={{ once: true, margin: "-20px" }}
+      transition={{ duration: 0.4 }}
       className={`text-3xl font-bold tracking-tight text-zinc-100 ${
         disableBorder ? "" : "mb-8 border-b border-zinc-800 pb-4"
       }`}
