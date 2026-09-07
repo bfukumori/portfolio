@@ -78,8 +78,8 @@ export function JsonLd() {
           description: proj.description,
           applicationCategory: proj.categoryTag,
           operatingSystem: "Cross-Platform",
-          ...(proj.webUrl || proj.githubUrl || proj.link
-            ? { url: proj.webUrl || proj.githubUrl || proj.link }
+          ...(proj.webUrl || proj.githubUrl
+            ? { url: proj.webUrl || proj.githubUrl }
             : {}),
         })),
       },
