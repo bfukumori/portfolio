@@ -1,70 +1,76 @@
-import type { Education, Experience, Profile, Project, Skill } from "./types";
+import type {
+  Education,
+  Experience,
+  FeaturedProject,
+  MetricStat,
+  Profile,
+  TechDomain,
+} from "./types";
 
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ||
   (process.env.VERCEL_PROJECT_PRODUCTION_URL
     ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "https://brunofukumori.com.br");
+    : "https://tamagolabs.com.br");
 
 export const profile: Profile = {
   name: "Bruno Fukumori",
   role: "Engenheiro de Software Sênior | Fullstack",
+  tagline: "Senior Fullstack Engineer",
   location: "São Paulo, SP",
+  locationDetails: "São Paulo, SP (Remoto / Híbrido)",
   email: "brunofukumori@gmail.com",
   phone: "+55 11 99622-7088",
+  whatsappUrl: "https://wa.me/5511996227088",
   linkedin: "https://www.linkedin.com/in/bfukumori/",
   github: "https://github.com/bfukumori",
   about:
-    "Engenheiro de Software Sênior especializado no ecossistema TypeScript. Desenho e implemento sistemas escaláveis, resilientes e de alta performance, desde arquiteturas distribuídas no backend até aplicações mobile cross-platform. Combino forte embasamento em Clean Architecture e boas práticas com uma visão analítica moldada por uma transição de carreira bem-sucedida da área da saúde para a tecnologia.",
+    "Especialista em ecossistemas modernos (Node.js/Next.js, React/Vite e React Native/Expo). Experiência comprovada em portais de saúde atendendo mais de 2 milhões de vidas e governança corporativa no mercado financeiro.",
+  heroEyebrow: "ENGENHEIRO DE SOFTWARE SÊNIOR • TECNOLOGIA & PERFORMANCE",
+  heroTitle: {
+    prefix: "Transformando complexidade em produtos",
+    highlight: "rápidos, escaláveis",
+    suffix: "e lucrativos.",
+  },
+  availabilityStatus: "Disponível p/ novos projetos",
+  avatarUrl: "/profile.jpg",
+  experienceBadge: "10+ anos de Engenharia",
+  heroCardTags: [
+    "Javascript",
+    "Typescript",
+    "Node.js",
+    "React",
+    "React Native",
+    "NestJS",
+    "Next.js",
+    "Expo",
+  ],
 };
 
-export const skills: Skill[] = [
+export const metricStats: MetricStat[] = [
   {
-    category: "Linguagens & Ecossistema",
-    items: ["TypeScript", "JavaScript", "HTML", "CSS", "Node.js", "Bun"],
+    id: "impact",
+    value: "+2.000.000",
+    label: "Vidas impactadas em produção",
+    gradientClass: "from-cyan-400 via-sky-300 to-blue-400",
   },
   {
-    category: "Frontend & Mobile",
-    items: [
-      "React",
-      "Next.js",
-      "Vite",
-      "React Native",
-      "Expo",
-      "React Query",
-      "Zustand",
-      "Tailwind",
-    ],
+    id: "experience",
+    value: "10+ Anos",
+    label: "Rigor analítico + Execução Tech",
+    gradientClass: "from-blue-400 via-indigo-300 to-sky-300",
   },
   {
-    category: "Backend",
-    items: [
-      "NestJS",
-      "Express/Fastify",
-      "REST API",
-      "BFF (Backend For Frontend)",
-      "Microservices",
-      "Elysia",
-    ],
+    id: "cicd",
+    value: "-67.5%",
+    label: "Tempo em Pipelines (CI/CD)",
+    gradientClass: "from-emerald-400 via-teal-300 to-cyan-400",
   },
   {
-    category: "Infraestrutura & DevOps",
-    items: [
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "AWS",
-      "GCP",
-      "Azure DevOps",
-      "CI/CD",
-      "Turborepo",
-      "Nx",
-      "GitHub Actions",
-    ],
-  },
-  {
-    category: "Banco de Dados & Mensageria",
-    items: ["SQL", "NoSQL", "Redis", "RabbitMQ", "BullMQ", "Kafka"],
+    id: "stack",
+    value: "Fullstack",
+    label: "Mobile Cross-Platform & Backend",
+    gradientClass: "from-indigo-400 via-purple-300 to-cyan-400",
   },
 ];
 
@@ -73,196 +79,145 @@ export const experiences: Experience[] = [
     id: "hapvida",
     role: "Engenheiro de Software Sênior",
     company: "Hapvida NotreDame Intermédica",
-    period: "Outubro 2025 - Presente",
+    period: "2024 — Presente",
+    isCurrent: true,
     description: [
-      "Desenvolvimento de um aplicativo inovador de marketplace de serviços utilizando React Native e Expo, focado em entregar uma experiência fluida para usuários e provedores.",
-      "Arquitetura e implementação de soluções escaláveis em ambientes mobile, garantindo performance e segurança na integração de APIs, sistemas de pagamento e autenticação.",
-      "Adoção e disseminação de boas práticas de desenvolvimento, testes automatizados e pipelines de CI/CD.",
-      "Atuação ativa na mentoria e suporte técnico para desenvolvedores juniores da equipe.",
+      "Desenvolvimento de Marketplace Mobile de saúde cross-platform utilizando React Native e Expo.",
+      "Integração de biometria e desenho de esteiras automatizadas de CI/CD para deploy seguro em larga escala.",
     ],
-    technologies: ["React Native", "Expo", "TypeScript", "JavaScript", "CI/CD"],
+    technologies: [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "CI/CD Mobile",
+      "Clean Architecture",
+    ],
   },
   {
     id: "ten",
-    role: "Desenvolvedor Fullstack",
-    company: "TEN",
-    period: "Outubro 2025 - Fevereiro 2026",
+    role: "Desenvolvedor Fullstack Sênior",
+    company: "TEN Tecnologia",
+    period: "2024 — 2024",
+    isCurrent: false,
     description: [
-      "Desenvolvimento de soluções robustas de backend e frontend para garantir processos seguros de governança digital em assembleias virtuais para o mercado de capitais.",
-      "Desenho e implementação de APIs utilizando Node.js e NestJS para suportar as funcionalidades core do negócio.",
-      "Implementação de gerenciamento de filas e processamento distribuído com BullMQ, garantindo escalabilidade e confiabilidade na execução de tarefas.",
-      "Construção de rotinas para extração, manipulação e gerenciamento seguro de arquivos e documentos de conformidade.",
+      "Arquitetura de microsserviços orientada a eventos para governança corporativa e serviços de assembleias digitais no mercado de capitais.",
+      "Criação de workers com NestJS e BullMQ para processamento assíncrono em conformidade com auditoria e compliance regulatório (CVM).",
     ],
-    technologies: ["Node.js", "NestJS", "React", "BullMQ", "API Design"],
+    technologies: ["Nest.js", "React", "BullMQ", "Redis", "PostgreSQL"],
   },
   {
     id: "wefit",
     role: "Desenvolvedor Sênior",
     company: "Wefit",
-    period: "Novembro 2022 - Outubro 2025",
+    period: "2022 — 2024",
+    isCurrent: false,
     description: [
-      "Desenvolvimento de portal web multioperadora para área da saúde (> 2 milhões de vidas), atuando em novas features, resolução de bugs e code reviews.",
-      "Atuação no time de Arquitetura e Qualidade definindo ADRs e documentações de processos.",
-      "Desenvolvimento de um Internal Developer Portal (IDP) utilizando Backstage, automatizando CI/CD e reduzindo o tempo de setup de novos projetos em mais de 90%.",
-      "Otimização de imagens Docker com git submodules, reduzindo o tempo de build em mais de 50% (de 40 para 13 minutos).",
-      "Arquitetura e desenvolvimento de BFFs para portal web de seguradora com NestJS, aplicando boas práticas de Clean Code.",
-      "Integração de portal web utilizando arquitetura de Monorepo (Turborepo) e Next.js.",
-      "Criação de POCs para microfrontends com módulos federados e testes automatizados com Playwright e Vitest.",
+      "Sustentação e evolução de portais de saúde multioperadora atendendo >2 milhões de usuários.",
+      "Implementação de Internal Developer Portal (Backstage) acelerando novos serviços em 90% e refatoração de Dockerfiles gerando redução de 67% no tempo de CI/CD.",
     ],
     technologies: [
-      "TypeScript",
-      "Next.js",
-      "NestJS",
-      "Docker",
       "Backstage",
-      "Playwright",
-      "Vitest",
-      "Turborepo",
+      "Vite",
+      "React",
+      "Next.js",
+      "Nest.js",
+      "BFF Architecture",
+      "Docker",
     ],
   },
   {
     id: "einstein",
-    role: "Biomédico Pleno",
+    role: "Biomédico Pleno / Rigor Analítico",
     company: "Hospital Israelita Albert Einstein",
-    period: "Maio 2012 - Novembro 2022",
+    period: "2012 — 2022",
+    isCurrent: false,
     description: [
-      "Responsável pela realização de exames de rotina no setor de tomografia computadorizada e otimização de protocolos médicos.",
-      "Orientador do estágio de pós-graduação em imagem em tomografia, desenvolvendo habilidades de mentoria técnica.",
+      "Diagnóstico de precisão em exames de tomografia computadorizada e atuação na formação de pós-graduandos.",
+      "Tolerância zero a falhas em casos clínicos críticos: pensamento sistêmico e metodologia científica que hoje ancoram a maturidade da minha engenharia de software.",
     ],
     technologies: [
-      "Otimização de Processos",
-      "Mentoria",
-      "Análise de Dados Críticos",
+      "Rigor Científico",
+      "Pensamento Crítico",
+      "Metodologias Ágeis",
+      "Zero-Tolerance for Error",
     ],
   },
 ];
 
-export const projects: Project[] = [
+export const featuredProjects: FeaturedProject[] = [
   {
-    id: "monorepo-backoffice-example",
-    title: "Monorepo Backoffice Example",
-    architecture: "Turborepo, NestJS & Vite",
+    id: "marketplace-saude",
+    categoryTag: "Hapvida • Portal Web • Mobile",
+    title: "Marketplace & Portal de Saúde",
     description:
-      "Arquitetura monorepo full-stack para sistemas de backoffice, utilizando pnpm workspaces, NestJS no backend, Vite/React no frontend e pacotes compartilhados de domínio e tipagem.",
-    metrics: [
-      "Monorepo",
-      "Full-Stack",
-      "TypeScript",
-      "SOLID",
-      "Clean Architecture",
-    ],
-    link: "https://github.com/bfukumori/monorepo-backoffice-example",
+      "Arquitetura de app mobile e portal para agendamento, telemedicina e consultas para mais de 2 milhões de vidas, com foco em 60fps em aparelhos de entrada e testes via E2E.",
+    tags: ["React", "React Native", "Vite", "Expo"],
+    webUrl: "https://portal-beneficiario.hapvida.com.br/",
+    appStoreUrl: "https://apps.apple.com/br/app/hapvida/id1550782810",
+    playStoreUrl:
+      "https://play.google.com/store/apps/details?id=br.com.hapvida.hapvida&hl=pt-BR",
+    statusBadge: "Produção • +2M vidas ativas",
+    isProduction: true,
   },
   {
-    id: "grindsense-backend",
-    title: "GrindSense API",
-    architecture: "TypeScript & Node.js",
+    id: "monorepo-backoffice",
+    categoryTag: "Arquitetura Corporativa",
+    title: "Monorepo & Backoffice",
     description:
-      "API de backend desenvolvida para o projeto GrindSense (NEXT 2026 - FIAP). Otimizada para o armazenamento e processamento eficiente de dados biométricos e séries temporais.",
-    metrics: ["Séries Temporais", "Processamento Biométrico", "TypeScript"],
-    link: "https://github.com/bfukumori/grindsense-backend",
+      "Template desacoplado com Turborepo, pnpm workspaces, pacotes compartilhados de design system e observabilidade com OpenTelemetry e LGTM Stack (Loki, Grafana, Tempo, Prometheus).",
+    tags: ["Turborepo", "OpenTelemetry", "Docker"],
+    githubUrl: "https://github.com/bfukumori/monorepo-backoffice-example",
+    isProduction: false,
   },
+];
+
+export const techDomains: TechDomain[] = [
   {
-    id: "micro-app-architecture",
-    title: "Micro App Architecture Demo",
-    architecture: "TypeScript & Microfrontends",
-    description:
-      "Laboratório de arquitetura focado em modularidade e escalabilidade utilizando padrões de Micro-Apps (Microfrontends).",
-    metrics: ["Escalabilidade Modular", "Desacoplamento", "Integração"],
-    link: "https://github.com/bfukumori/micro-app-architecture-demo",
-  },
-  {
-    id: "cpu-profiling",
-    title: "Node.js CPU Profiling",
-    architecture: "JavaScript & Node Inspector",
-    description:
-      "Projeto prático para o diagnóstico avançado de problemas de performance e gargalos de CPU em ambientes Node.js utilizando ferramentas de inspeção nativas.",
-    metrics: [
-      "Diagnóstico de Performance",
-      "Observabilidade",
-      "Troubleshooting",
-    ],
-    link: "https://github.com/bfukumori/cpu-profiling-example",
-  },
-  {
-    id: "design-patterns",
-    title: "Design Patterns",
-    architecture: "Java & Orientação a Objetos",
-    description:
-      "Implementação prática dos principais padrões de projeto (Design Patterns) da Engenharia de Software, focando em Clean Architecture e princípios SOLID.",
-    metrics: ["Boas Práticas", "SOLID", "Arquitetura Limpa"],
-    link: "https://github.com/bfukumori/design-patterns",
-  },
-  {
-    id: "data-structures",
-    title: "Data Structures",
-    architecture: "Java & Algoritmos",
-    description:
-      "Repositório focado na implementação detalhada e estudo aprofundado das principais estruturas de dados da ciência da computação.",
-    metrics: [
-      "Fundamentos de Engenharia",
-      "Algoritmos Nativos",
-      "Estudo de Complexidade",
-    ],
-    link: "https://github.com/bfukumori/data-structures",
-  },
-  {
-    id: "marketplace-mobile",
-    title: "Marketplace de Serviços Mobile na Área da Saúde",
-    architecture: "React Native, Expo & APIs Seguras",
-    description:
-      "Desenvolvimento e arquitetura de um aplicativo mobile focado em alta usabilidade, integrando sistemas complexos de agendamento e autenticação em tempo real.",
-    metrics: [
-      "Performance Mobile Otimizada",
-      "Integração Segura de Agendamentos",
-      "Pipeline CI/CD Automatizada",
+    id: "frontend",
+    title: "Frontend & Mobile",
+    iconName: "frontend",
+    items: [
+      "React & Next.js (App Router)",
+      "React Native & Expo",
+      "TypeScript (ESM & Strict)",
+      "Tailwind CSS & Shadcn/UI",
+      "TanStack Query & Zustand",
     ],
   },
   {
-    id: "digital-assemblies",
-    title: "Plataforma de Governança Digital",
-    architecture: "Node.js, NestJS & Processamento Assíncrono",
-    description:
-      "Sistema para assembleias virtuais do mercado de capitais utilizando filas robustas para processamento paralelo e manipulação segura de documentos.",
-    metrics: [
-      "Alta Confiabilidade com BullMQ",
-      "Processamento Distribuído",
-      "Conformidade e Segurança de Dados",
+    id: "backend",
+    title: "Backend & APIs",
+    iconName: "backend",
+    items: [
+      "Node.js & NestJS",
+      "Fastify & Express",
+      "REST APIs & GraphQL",
+      "Microsserviços & BFF",
+      "Docker & Containerização",
     ],
   },
   {
-    id: "idp-backstage",
-    title: "Internal Developer Portal (IDP)",
-    architecture: "Backstage & Automação CI/CD",
-    description:
-      "Criação de templates de arquitetura padronizados para acelerar o desenvolvimento web e mobile em ambiente corporativo.",
-    metrics: [
-      "Redução de >90% no tempo de setup",
-      "Padronização de arquitetura",
-      "Automação de CI/CD pipeline",
+    id: "database",
+    title: "Dados & Mensageria",
+    iconName: "database",
+    items: [
+      "BullMQ & Background Jobs",
+      "Redis (Cache & Concorrência)",
+      "PostgreSQL & Prisma/TypeORM/Drizzle",
+      "MongoDB & NoSQL",
+      "RabbitMQ / Apache Kafka",
     ],
   },
   {
-    id: "docker-optimization",
-    title: "Otimização de Pipeline de Build",
-    architecture: "Docker & Git Submodules",
-    description:
-      "Refatoração e otimização de imagens Docker em uma aplicação de alta complexidade com múltiplos submódulos git.",
-    metrics: [
-      "Redução do tempo de build de 40 min para 13 min",
-      "Diminuição de 50%+ em custos de esteira",
-    ],
-  },
-  {
-    id: "health-portal",
-    title: "Portal de Saúde Multioperadora",
-    architecture: "Microfrontends & BFF (NestJS)",
-    description:
-      "Implementação e sustentação de um portal de saúde crítico, integrando arquitetura de microfrontends e Backend for Frontend para orquestração de dados seguros.",
-    metrics: [
-      "Escala para >2 milhões de vidas",
-      "Arquitetura Clean Code",
-      "Testes end-to-end automatizados",
+    id: "engineering",
+    title: "Engenharia & Práticas",
+    iconName: "engineering",
+    items: [
+      "Clean Code & Clean Arch",
+      "Test-driven Assurance",
+      "CI/CD (GitHub Actions)",
+      "Vitest & Playwright",
+      "SOLID & Design Patterns",
     ],
   },
 ];

@@ -1,16 +1,16 @@
 import {
   education,
   experiences,
+  featuredProjects,
   profile,
   siteUrl,
-  skills,
+  techDomains,
 } from "@/data/portfolio";
 
 export function JsonLd() {
-  const allSkills = skills.flatMap((group) => group.items);
-  const currentCompany =
-    experiences.find((exp) => exp.period.toLowerCase().includes("presente"))
-      ?.company || experiences[0]?.company;
+  const allSkills = techDomains.flatMap((domain) => domain.items);
+  const currentExperience = experiences.find((exp) => exp.isCurrent);
+  const currentCompany = currentExperience?.company || experiences[0]?.company;
 
   const schema = {
     "@context": "https://schema.org",
@@ -22,7 +22,7 @@ export function JsonLd() {
         jobTitle: profile.role,
         description: profile.about,
         url: siteUrl,
-        image: `${siteUrl}/opengraph-image`,
+        image: `${siteUrl}${profile.avatarUrl}`,
         email: `mailto:${profile.email}`,
         telephone: profile.phone,
         sameAs: [profile.linkedin, profile.github],
@@ -72,6 +72,16 @@ export function JsonLd() {
           "@id": `${siteUrl}/#person`,
         },
         inLanguage: "pt-BR",
+        hasPart: featuredProjects.map((proj) => ({
+          "@type": "SoftwareApplication",
+          name: proj.title,
+          description: proj.description,
+          applicationCategory: proj.categoryTag,
+          operatingSystem: "Cross-Platform",
+          ...(proj.webUrl || proj.githubUrl || proj.link
+            ? { url: proj.webUrl || proj.githubUrl || proj.link }
+            : {}),
+        })),
       },
     ],
   };
