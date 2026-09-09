@@ -160,6 +160,16 @@ export const featuredProjects: FeaturedProject[] = [
     isProduction: true,
   },
   {
+    id: "scaffold-nestjs-api",
+    categoryTag: "NestJS • API • Template",
+    title: "NestJS API Scaffold",
+    description:
+      "Template base de API corporativa em NestJS 12 (ESM) com PostgreSQL, Drizzle ORM, Redis e observabilidade completa com OpenTelemetry, Prometheus, Tempo e Loki.",
+    tags: ["NestJS", "Drizzle ORM", "OpenTelemetry","Prometheus","Tempo","Loki","Grafana","PostgreSQL","Redis","Docker", "CI/CD","Clean Architecture","SOLID","Design Patterns"],
+    githubUrl: "https://github.com/bfukumori/scaffold-nestjs-api",
+    isProduction: false,
+  },
+  {
     id: "monorepo-backoffice",
     categoryTag: "Arquitetura Corporativa",
     title: "Monorepo & Backoffice",
