@@ -1,6 +1,18 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import { metricStats } from "@/data/portfolio";
 
 export function MetricsBar() {
+  const { t, locale } = useLanguage();
+
+  const labelMap: Record<string, string> = {
+    impact: t.metrics.impact,
+    experience: t.metrics.experience,
+    cicd: t.metrics.cicd,
+    stack: t.metrics.stack,
+  };
+
   return (
     <section className="py-8 my-6" aria-label="Métricas de Impacto">
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -12,10 +24,12 @@ export function MetricsBar() {
             <div
               className={`text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-transparent bg-clip-text bg-linear-to-r ${stat.gradientClass}`}
             >
-              {stat.value}
+              {locale === "en" && stat.id === "experience"
+                ? "+10 Years"
+                : stat.value}
             </div>
             <p className="mt-2 text-xs sm:text-sm font-medium text-zinc-400 leading-snug">
-              {stat.label}
+              {labelMap[stat.id] ?? stat.label}
             </p>
           </div>
         ))}

@@ -1,11 +1,18 @@
+"use client";
+
+import { useLanguage } from "@/contexts/LanguageContext";
 import { profile } from "@/data/portfolio";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="border-t border-zinc-900/90 py-8 mt-12 text-xs text-zinc-500">
       <div className="mx-auto flex max-w-6xl flex-col sm:flex-row items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <div>
-          <span>{profile.name} • São Paulo, SP - Remoto / Global</span>
+          <span>
+            {profile.name} • {t.footer.location}
+          </span>
         </div>
 
         <div className="flex items-center gap-4 font-medium">
@@ -32,7 +39,7 @@ export function Footer() {
             download="Bruno_Fukumori_CV_PT.pdf"
             className="hover:text-zinc-300 transition-colors"
           >
-            Currículo (PT)
+            {t.footer.curriculumPt}
           </a>
           <span className="text-zinc-800">•</span>
           <a
@@ -40,7 +47,7 @@ export function Footer() {
             download="Bruno_Fukumori_CV_EN.pdf"
             className="hover:text-zinc-300 transition-colors"
           >
-            CV (EN)
+            {t.footer.curriculumEn}
           </a>
         </div>
       </div>

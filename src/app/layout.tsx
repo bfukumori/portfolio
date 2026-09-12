@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 import { siteUrl } from "@/data/portfolio";
 import "./globals.css";
 
@@ -98,7 +99,7 @@ export default function RootLayout({
       className={`dark ${inter.variable} antialiased bg-zinc-950`}
     >
       <body>
-        {children}
+        <LanguageProvider>{children}</LanguageProvider>
         <SpeedInsights />
         <Analytics />
       </body>

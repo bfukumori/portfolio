@@ -1,24 +1,13 @@
 export interface Profile {
   name: string;
   role: string;
-  tagline: string;
-  location: string;
-  locationDetails: string;
   email: string;
   phone: string;
   whatsappUrl: string;
   linkedin: string;
   github: string;
   about: string;
-  heroEyebrow: string;
-  heroTitle: {
-    prefix: string;
-    highlight: string;
-    suffix: string;
-  };
-  availabilityStatus: string;
   avatarUrl: string;
-  experienceBadge: string;
   heroCardTags: string[];
 }
 
