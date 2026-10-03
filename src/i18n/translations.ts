@@ -81,6 +81,9 @@ export const translations = {
       sectionEyebrow: "Cases de Impacto",
       sectionTitle: "Projetos em Destaque",
       viewGithub: "Ver todos no GitHub",
+      prevSlide: "Projeto anterior",
+      nextSlide: "Próximo projeto",
+      slideCount: "Projeto {current} de {total}",
       items: {
         "marketplace-saude": {
           categoryTag: "Hapvida • Portal Web • Mobile",
@@ -88,6 +91,12 @@ export const translations = {
           description:
             "Arquitetura de app mobile e portal para agendamento, telemedicina e consultas para mais de 2 milhões de vidas, com foco em 60fps em aparelhos de entrada e testes via E2E.",
           statusBadge: "Produção • +2M vidas ativas",
+        },
+        "scaffold-expo-app": {
+          categoryTag: "Expo SDK 57 • Mobile & Web • Template",
+          title: "Expo Universal Starter",
+          description:
+            "Template starter robusto, modular, escalável e de rápida customização para novos aplicativos universais (iOS, Android e Web) utilizando Expo SDK 57, React 19, Expo Router e Feature-Driven Architecture.",
         },
         "scaffold-nestjs-api": {
           categoryTag: "NestJS • API • Template",
@@ -249,6 +258,9 @@ export const translations = {
       sectionEyebrow: "Impact Cases",
       sectionTitle: "Featured Projects",
       viewGithub: "View all on GitHub",
+      prevSlide: "Previous project",
+      nextSlide: "Next project",
+      slideCount: "Project {current} of {total}",
       items: {
         "marketplace-saude": {
           categoryTag: "Hapvida • Web Portal • Mobile",
@@ -256,6 +268,12 @@ export const translations = {
           description:
             "Mobile app and portal architecture for scheduling, telemedicine and consultations for over 2 million lives, focused on 60fps on entry-level devices and E2E testing.",
           statusBadge: "Production • +2M active lives",
+        },
+        "scaffold-expo-app": {
+          categoryTag: "Expo SDK 57 • Mobile & Web • Template",
+          title: "Expo Universal Starter",
+          description:
+            "Robust, modular, and scalable starter template for universal apps (iOS, Android, and Web) powered by Expo SDK 57, React 19, Expo Router, and Feature-Driven Architecture.",
         },
         "scaffold-nestjs-api": {
           categoryTag: "NestJS • API • Template",

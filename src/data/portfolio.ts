@@ -149,6 +149,23 @@ export const featuredProjects: FeaturedProject[] = [
     isProduction: true,
   },
   {
+    id: "scaffold-expo-app",
+    categoryTag: "Expo SDK 57 • Mobile & Web • Template",
+    title: "Expo Universal Starter",
+    description:
+      "Template starter robusto, modular, escalável e de rápida customização para novos aplicativos universais (iOS, Android e Web) utilizando Expo SDK 57, React 19, Expo Router e Feature-Driven Architecture.",
+    tags: [
+      "Expo SDK 57",
+      "React 19",
+      "Expo Router",
+      "React Native",
+      "TanStack Query",
+      "Zustand",
+    ],
+    githubUrl: "https://github.com/bfukumori/scaffold-expo-app",
+    isProduction: false,
+  },
+  {
     id: "scaffold-nestjs-api",
     categoryTag: "NestJS • API • Template",
     title: "NestJS API Scaffold",
