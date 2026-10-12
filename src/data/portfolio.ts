@@ -22,7 +22,7 @@ export const profile: Profile = {
   linkedin: "https://www.linkedin.com/in/bfukumori/",
   github: "https://github.com/bfukumori",
   about:
-    "Especialista em ecossistemas modernos (Node.js/Next.js, React/Vite e React Native/Expo). Experiência comprovada em portais de saúde atendendo mais de 2 milhões de vidas e governança corporativa no mercado financeiro.",
+    "Especialista em ecossistemas modernos (Node.js/NestJS, React/Vite/Next.js e React Native/Expo). Experiência comprovada em portais de saúde atendendo mais de 2 milhões de vidas e governança corporativa no mercado financeiro.",
   avatarUrl: "/profile.jpg",
   heroCardTags: [
     "Javascript",
