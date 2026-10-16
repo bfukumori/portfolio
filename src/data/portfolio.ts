@@ -166,8 +166,18 @@ export const featuredProjects: FeaturedProject[] = [
     isProduction: false,
   },
   {
-    id: "scaffold-nestjs-api",
-    categoryTag: "NestJS • API • Template",
+    id: "nestjs-scaffold-ddd",
+    categoryTag: "NestJS • API • Template • DDD",
+    title: "NestJS API Scaffold DDD",
+    description:
+      "Template base de API em NestJS 12 (ESM) seguindo uma abordagem de Domain Driven Design (DDD)",
+    tags: ["NestJS", "Clean Architecture", "SOLID", "Design Patterns"],
+    githubUrl: "https://github.com/bfukumori/nestjs-scaffold-ddd",
+    isProduction: false,
+  },
+  {
+    id: "scaffold-nestjs-hexagonal-arch",
+    categoryTag: "NestJS • API • Template • Hexagonal Architeture",
     title: "NestJS API Scaffold",
     description:
       "Template base de API corporativa em NestJS 12 (ESM) com PostgreSQL, Drizzle ORM, Redis e observabilidade completa com OpenTelemetry, Prometheus, Tempo e Loki.",
@@ -187,7 +197,7 @@ export const featuredProjects: FeaturedProject[] = [
       "SOLID",
       "Design Patterns",
     ],
-    githubUrl: "https://github.com/bfukumori/scaffold-nestjs-api",
+    githubUrl: "https://github.com/bfukumori/scaffold-nestjs-hexagonal-arch",
     isProduction: false,
   },
   {
